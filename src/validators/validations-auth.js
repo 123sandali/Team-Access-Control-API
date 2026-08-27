@@ -1,8 +1,7 @@
 import {z} from 'zod';
 
 const registerSchema = z.object({
-    id: z.string().uuid({message: "Invalid user ID"}),
-    name: z
+    username: z
         .string()
         .trim()
         .min(2, {message: "Name must be at least 2 characters long"})
